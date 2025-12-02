@@ -4,6 +4,10 @@ import TriggerNotification from "./components/TriggerNotification";
  */
 import Kv from "@/app/lib/storage/kv";
 
+// Force this page to never be cached
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export default async function Home() {
   const pushRecords = await Kv.GetInstance().GetRecordsByPrefix(
     "push_subscriptions_1_"
