@@ -18,6 +18,7 @@ export async function POST() {
   const payload = JSON.stringify({
     title: "New Notification",
     body: "This is a push notification from the Node.js server",
+    url: "https://google.com",
   });
 
   for (const key of Object.keys(pushRecords)) {
