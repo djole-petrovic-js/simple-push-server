@@ -15,19 +15,38 @@ export async function POST() {
 
   const responseData = [];
 
-  const payload = JSON.stringify({
-    title: "New Notification",
-    body: "This is a push notification from the Node.js server",
-    icon: "https://cruel-cats.surge.sh/icon.png",
-    badge: "https://cruel-cats.surge.sh/icon.png",
-    url: "https://google.com",
-    // url: "https://localhost:5173/",
-  });
+  // const payload = JSON.stringify({
+  //   title: "New Notification",
+  //   body: "This is a push notification from the Node.js server",
+  //   icon: "https://cruel-cats.surge.sh/icon.png",
+  //   badge: "https://cruel-cats.surge.sh/icon.png",
+  //   url: "https://google.com",
+  //   // url: "https://localhost:5173/",
+  // });
+
+  const payload = {
+    web_push: 8030,
+    notification: {
+      title: "Evo velike slike!",
+      body: "Klikni i drži (long press) da vidiš sliku.",
+      image: "https://cruel-cats.surge.sh/hero_image.jpg",
+      icon: "https://cruel-cats.surge.sh/icon.png",
+      click_url: "https://google.com",
+      actions: [
+        {
+          action: "open",
+          title: "Otvori odmah",
+        },
+      ],
+    },
+  };
 
   for (const key of Object.keys(pushRecords)) {
     try {
       await webpush.sendNotification(
         pushRecords[key].subscription.subscription.browserSubscription,
+        // ignore
+        // @ts-expect-error stringify
         payload
       );
 
