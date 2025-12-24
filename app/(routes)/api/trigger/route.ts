@@ -45,7 +45,12 @@ export async function POST() {
     try {
       await webpush.sendNotification(
         pushRecords[key].subscription.subscription.browserSubscription,
-        payload
+        payload,
+        {
+          headers: {
+            "Content-Type": "application/notification+json", // OVO JE KLJUČNO
+          },
+        }
       );
 
       responseData.push({
