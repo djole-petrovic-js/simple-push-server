@@ -68,6 +68,7 @@ export async function POST() {
         pushRecords[key].subscription.subscription.browserSubscription,
         payload,
         {
+          contentEncoding: "aes128gcm",
           headers: {
             "Content-Type": "application/notification+json", // OVO JE KLJUČNO
             "Mutable-Content": "1",
