@@ -44,7 +44,7 @@ export async function POST() {
   const payload = JSON.stringify({
     web_push: 8030,
     notification: {
-      title: "Slika radi!",
+      title: "Slika radi 2!",
       body: "Pritisni jako na mene da me vidiš!",
       // image: "https://cruel-cats.surge.sh/hero_image.jpg",
       image: "https://cruel-cats.surge.sh/hero_image_1024_512.jpg",
