@@ -24,7 +24,7 @@ export async function POST() {
   //   // url: "https://localhost:5173/",
   // });
 
-  const payload = {
+  const payload = JSON.stringify({
     web_push: 8030,
     notification: {
       title: "Evo velike slike!",
@@ -39,14 +39,12 @@ export async function POST() {
         },
       ],
     },
-  };
+  });
 
   for (const key of Object.keys(pushRecords)) {
     try {
       await webpush.sendNotification(
         pushRecords[key].subscription.subscription.browserSubscription,
-        // ignore
-        // @ts-expect-error stringify
         payload
       );
 
@@ -55,6 +53,8 @@ export async function POST() {
         success: true,
       });
     } catch (err) {
+      console.log("error", err);
+
       responseData.push({
         userId: pushRecords[key].subscription.subscription.userId,
         success: false,
