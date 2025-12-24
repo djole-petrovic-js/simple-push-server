@@ -24,20 +24,30 @@ export async function POST() {
   //   // url: "https://localhost:5173/",
   // });
 
+  // const payload = JSON.stringify({
+  //   web_push: 8030,
+  //   notification: {
+  //     title: "Evo velike slike!",
+  //     body: "Klikni i drži (long press) da vidiš sliku.",
+  //     image: "https://cruel-cats.surge.sh/hero_image.jpg",
+  //     icon: "https://cruel-cats.surge.sh/icon.png",
+  //     click_url: "https://google.com",
+  //     actions: [
+  //       {
+  //         action: "open",
+  //         title: "Otvori odmah",
+  //       },
+  //     ],
+  //   },
+  // });
+
   const payload = JSON.stringify({
     web_push: 8030,
     notification: {
-      title: "Evo velike slike!",
-      body: "Klikni i drži (long press) da vidiš sliku.",
+      title: "Slika radi!",
+      body: "Pritisni jako na mene da me vidiš!",
       image: "https://cruel-cats.surge.sh/hero_image.jpg",
       icon: "https://cruel-cats.surge.sh/icon.png",
-      click_url: "https://google.com",
-      actions: [
-        {
-          action: "open",
-          title: "Otvori odmah",
-        },
-      ],
     },
   });
 
