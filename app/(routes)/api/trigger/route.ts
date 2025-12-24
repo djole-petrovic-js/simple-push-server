@@ -48,6 +48,7 @@ export async function POST() {
       body: "Pritisni jako na mene da me vidiš!",
       image: "https://cruel-cats.surge.sh/hero_image.jpg",
       icon: "https://cruel-cats.surge.sh/icon.png",
+      navigate: "https://cruel-cats.surge.sh/demo.html", // OBAVEZNO: 'navigate', ne 'url'
     },
   });
 
