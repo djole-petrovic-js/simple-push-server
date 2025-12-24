@@ -44,11 +44,15 @@ export async function POST() {
   const payload = JSON.stringify({
     web_push: 8030,
     mutable: true, // OVO DODAJ OVDE
+    image:
+      "https://www.catsluvus.com/wp-content/uploads/2024/06/dc38a6d2thumbnail.jpeg",
     notification: {
       title: "Slika radi 2!",
       body: "Pritisni jako na mene da me vidiš!",
       // image: "https://cruel-cats.surge.sh/hero_image.jpg",
-      image: "https://cruel-cats.surge.sh/hero_image_1024_512.jpg?v=222",
+      // image: "https://cruel-cats.surge.sh/hero_image_1024_512.jpg?v=222",
+      image:
+        "https://www.catsluvus.com/wp-content/uploads/2024/06/dc38a6d2thumbnail.jpeg",
       icon: "https://cruel-cats.surge.sh/icon.png",
       navigate: "https://cruel-cats.surge.sh/demo.html", // OBAVEZNO: 'navigate', ne 'url'
       tag: "test-v3",
