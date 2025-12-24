@@ -43,14 +43,22 @@ export async function POST() {
 
   const payload = JSON.stringify({
     web_push: 8030,
-    "content-available": 1,
     notification: {
-      title: "Zadnji test",
-      body: "Radi li sad?",
+      title: "Test Dugmića",
+      body: "Drži jako da vidiš dugmiće",
       image: "https://cruel-cats.surge.sh/hero_image_1024_512.jpg",
-      icon: "https://cruel-cats.surge.sh/icon.png",
       navigate: "https://cruel-cats.surge.sh",
-      tag: "final-test-1",
+      actions: [
+        {
+          action: "yes",
+          title: "Radi!",
+          icon: "https://cruel-cats.surge.sh/icon.png",
+        },
+        {
+          action: "no",
+          title: "Ne radi",
+        },
+      ],
     },
   });
 
