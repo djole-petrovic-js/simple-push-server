@@ -43,14 +43,14 @@ export async function POST() {
 
   const payload = JSON.stringify({
     web_push: 8030,
+    "content-available": 1,
     notification: {
-      title: "Sad bi moralo!",
-      body: "Long press (drži jako) za sliku 🐱",
-      image:
-        "https://www.catsluvus.com/wp-content/uploads/2024/06/dc38a6d2thumbnail.jpeg",
+      title: "Zadnji test",
+      body: "Radi li sad?",
+      image: "https://cruel-cats.surge.sh/hero_image_1024_512.jpg",
       icon: "https://cruel-cats.surge.sh/icon.png",
-      navigate: "https://cruel-cats.surge.sh/demo.html",
-      tag: "test-v10",
+      navigate: "https://cruel-cats.surge.sh",
+      tag: "final-test-1",
     },
   });
 
