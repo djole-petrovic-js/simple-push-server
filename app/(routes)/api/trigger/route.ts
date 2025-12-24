@@ -18,7 +18,10 @@ export async function POST() {
   const payload = JSON.stringify({
     title: "New Notification",
     body: "This is a push notification from the Node.js server",
+    icon: "https://cruel-cats.surge.sh/icon.png",
+    badge: "https://cruel-cats.surge.sh/icon.png",
     url: "https://google.com",
+    // url: "https://localhost:5173/",
   });
 
   for (const key of Object.keys(pushRecords)) {

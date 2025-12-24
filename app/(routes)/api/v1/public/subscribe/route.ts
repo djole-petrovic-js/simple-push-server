@@ -1,4 +1,4 @@
-import Kv from "../../../lib/storage/kv";
+import Kv from "../../../../../lib/storage/kv";
 import { NextRequest, NextResponse } from "next/server";
 
 const CORS_HEADERS = {
