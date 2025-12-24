@@ -48,10 +48,10 @@ export async function POST() {
       title: "Slika radi 2!",
       body: "Pritisni jako na mene da me vidiš!",
       // image: "https://cruel-cats.surge.sh/hero_image.jpg",
-      image: "https://cruel-cats.surge.sh/hero_image_1024_512.jpg?v=111",
+      image: "https://cruel-cats.surge.sh/hero_image_1024_512.jpg?v=222",
       icon: "https://cruel-cats.surge.sh/icon.png",
       navigate: "https://cruel-cats.surge.sh/demo.html", // OBAVEZNO: 'navigate', ne 'url'
-      tag: "test-v2",
+      tag: "test-v3",
     },
   });
 
@@ -63,6 +63,7 @@ export async function POST() {
         {
           headers: {
             "Content-Type": "application/notification+json", // OVO JE KLJUČNO
+            "Mutable-Content": "1",
           },
         }
       );
