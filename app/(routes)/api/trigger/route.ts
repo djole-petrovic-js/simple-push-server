@@ -46,7 +46,8 @@ export async function POST() {
     notification: {
       title: "Slika radi!",
       body: "Pritisni jako na mene da me vidiš!",
-      image: "https://cruel-cats.surge.sh/hero_image.jpg",
+      // image: "https://cruel-cats.surge.sh/hero_image.jpg",
+      image: "https://cruel-cats.surge.sh/hero_image_1024_512.jpg",
       icon: "https://cruel-cats.surge.sh/icon.png",
       navigate: "https://cruel-cats.surge.sh/demo.html", // OBAVEZNO: 'navigate', ne 'url'
     },
