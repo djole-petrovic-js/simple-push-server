@@ -43,6 +43,7 @@ export async function POST() {
 
   const payload = JSON.stringify({
     web_push: 8030,
+    mutable: true, // OVO DODAJ OVDE
     notification: {
       title: "Slika radi 2!",
       body: "Pritisni jako na mene da me vidiš!",
