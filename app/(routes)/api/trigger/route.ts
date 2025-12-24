@@ -51,7 +51,7 @@ export async function POST() {
       image: "https://cruel-cats.surge.sh/hero_image_1024_512.jpg?v=111",
       icon: "https://cruel-cats.surge.sh/icon.png",
       navigate: "https://cruel-cats.surge.sh/demo.html", // OBAVEZNO: 'navigate', ne 'url'
-      tag: "test-v1",
+      tag: "test-v2",
     },
   });
 
